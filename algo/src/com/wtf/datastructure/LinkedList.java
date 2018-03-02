@@ -35,30 +35,6 @@ public class LinkedList {
 		System.out.println("");
 	}
 
-	public void reverse() {
-		LinkedList list = this;
-		Node header = list.getHeader();
-		Node tail = list.getHeader();
-		Node node = header.getNext();
-		while (tail.getNext() != null) {
-			header = list.getHeader();
-			Node nextNode = null;
-			if (node != null) {
-				nextNode = node.getNext();
-			}
-			tail.setNext(nextNode);
-
-			Node temp1 = node;
-			Node temp2 = header;
-
-			node = node.getNext();
-
-			temp1.setNext(temp2);
-			list.setHeader(temp1);
-			list.printList();
-		}
-	}
-
 	public Object get(Object val) {
 		Node header = getHeader();
 		if (header != null) {
